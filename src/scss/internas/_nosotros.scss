@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-nosotros {
+    padding-bottom: 5rem;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .imagen {
+
+        margin-bottom: 2rem;
+
+        img {
+            transform: rotate(-6deg);
+            border: 3rem solid v.$color_blanco;
+            box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, .35);
+        }
+    }
+
+    .texto {
+
+        blockquote {
+            margin: 0;
+            padding: 1rem;
+            border-left: .5rem solid v.$color_primario;
+            font-size: 2rem;
+        }
+    }
+}

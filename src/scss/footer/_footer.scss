@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$color_primario;
+
+    .contenido-footer {
+        padding: 5rem;
+        
+        @include m.tablet  {
+            padding: 10rem 5rem 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+    }
+}
+
+.footer-box {
+    font-family: v.$fuente_cursiva;
+    text-align: center;
+    padding-bottom: 2rem;
+    h3 {
+        font-family: v.$fuente_cursiva;
+        margin: 0 0 1rem;
+        font-size: 2.4rem;
+        color: v.$color_secundario;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+
+.copy {
+    p {
+        text-align: center;
+        color: white;
+        padding: 1rem;
+        margin: 0;
+    }
+    a {
+        color: white;
+        font-weight: 700;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,103 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include m.tablet {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .imagen {
+        img {
+            height: 30rem;
+            width: 30rem;
+            object-fit: cover;
+        }
+
+        @include m.tablet {
+            &:nth-child(1) {
+                grid-row: 1 / 3;
+                img {
+                    height: 62rem;
+                    margin: 0 auto;
+                    object-position: center;
+                }
+            }
+            
+            &:nth-child(2) {
+                grid-column: 2 / 4;
+                img {
+                    margin: 0 auto;
+                    width: 62rem;
+                    // object-position: center;
+                }
+            }
+            
+            &:nth-child(4) {
+                grid-row: 2 / 4;
+                img {
+                    margin: 0 auto;
+                    height: 62rem;
+                    object-position: center;
+                }
+            }
+            
+            &:nth-child(5) {
+                grid-column: 3 / 5;
+                img {
+                    margin: 0 auto;
+                    width: 62rem;
+                    // object-position: center;
+                }
+            }
+            
+            &:nth-child(6) {
+                grid-column: 3 / 5;
+                img {
+                    margin: 0 auto;
+                    width: 62rem;
+                    // object-position: center;
+                }
+            }
+            
+            &:nth-child(7) {
+                grid-row: 3 / 5;
+                img {
+                    margin: 0 auto; 
+                    height: 62rem;
+                    object-position: center;
+                }
+            }
+            
+            &:nth-child(8) {
+                grid-column: 2 / 5;
+                img {
+                    margin: 0 auto; 
+                    width: 94rem;
+                    object-position: center;
+                }
+            }
+            
+            &:nth-child(9) {
+                grid-column: 1 / 3;
+                img {
+                    margin: 0 auto; 
+                    width: 94rem;
+                    object-position: center;
+                }
+            }
+            &:nth-child(10) {
+                grid-column: 3 / 5;
+                img {
+                    margin: 0 auto; 
+                    width: 94rem;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    padding: 5rem 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include m.tablet  {
+        min-height: 70rem;
+    }
+
+    @include m.telefono {
+        padding: 4rem;
+    }
+
+    @include m.tablet {
+        padding: 3rem;
+    }
+
+    @include m.laptop {
+        padding: 2rem;
+    }
+
+    &::before {
+        content: '';
+        background-color: v.$color_negro;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .5;
+    }
+
+    .contenido-header {
+        margin-top: 5rem;
+        position: relative;
+
+        p {
+            text-align: center;
+            color: v.$color_blanco;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 5rem;
+            padding: 1rem;
+            @include m.tablet{
+                margin-top: 10rem;
+            }
+        }
+    }
+
+}
+
+// header de cada pagina
+.header-inicio {
+    background-image: url('../img/header_inicio.jpg');
+}
+
+.header-nosotros {
+    background-image: url('../img/header_nosotros.jpg');
+}
+
+.header-proceso {
+    background-image: url('../img/header_proceso.jpg');
+}
+
+.header-menu {
+    background-image: url('../img/header_menu.jpg');
+}
+
+.header-galeria {
+    background-image: url('../img/header_galeria.jpg');
+}
+
+.header-contacto {
+    background-image: url('../img/header_contacto.jpg');
+}
+
